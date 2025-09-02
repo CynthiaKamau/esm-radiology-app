@@ -1,6 +1,6 @@
-@use '@carbon/styles/scss/spacing';
-@use '@carbon/styles/scss/type';
-@import '@openmrs/esm-styleguide/src/vars';
+@use '@carbon/layout';
+@use '@carbon/type';
+@use '@openmrs/esm-styleguide/src/vars' as *;
 
 .desktopTile {
   border-left: 4px solid #18cd69;
@@ -44,7 +44,7 @@
 }
 
 .tabletTile .container {
-  padding: spacing.$spacing-03;
+  padding: layout.$spacing-03;
 
   h4 {
     @include type.type-style('heading-03');
@@ -53,13 +53,13 @@
 }
 
 .heading {
-  margin-left: spacing.$spacing-03;
+  margin-left: layout.$spacing-03;
 }
 
 .iconAndLabel {
   display: flex;
   align-items: center;
-  margin: spacing.$spacing-03;
+  margin: layout.$spacing-03;
 }
 
 .buttonContainer {

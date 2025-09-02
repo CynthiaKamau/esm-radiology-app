@@ -1,4 +1,5 @@
-@use '@carbon/styles/scss/spacing';
+@use '@carbon/layout';
+@use '@openmrs/esm-styleguide/src/vars' as *;
 
 .container {
   display: flex;
@@ -8,7 +9,7 @@
 }
 
 .orderBasketContainer {
-  margin: spacing.$spacing-05;
+  margin: layout.$spacing-05;
 }
 
 .orderBasketContainer :global(.cds--btn-set .cds--btn) {

@@ -3,9 +3,12 @@ import classNames from "classnames";
 import { useTranslation } from "react-i18next";
 import { Button, Tile } from "@carbon/react";
 import { Add, ChevronDown, ChevronUp } from "@carbon/react/icons";
-import { useLayoutType, closeWorkspace } from "@openmrs/esm-framework";
 import {
-  launchPatientWorkspace,
+  useLayoutType,
+  closeWorkspace,
+  launchWorkspace,
+} from "@openmrs/esm-framework";
+import {
   type OrderBasketItem,
   useOrderBasket,
 } from "@openmrs/esm-patient-common-lib";
@@ -65,15 +68,14 @@ export default function RadiologyOrderBasketPanelExtension() {
   const openNewRadiologyForm = useCallback(() => {
     closeWorkspace("order-basket", {
       ignoreChanges: true,
-      onWorkspaceClose: () => launchPatientWorkspace("add-radiology-order"),
+      onWorkspaceClose: () => launchWorkspace("add-radiology-order"),
     });
   }, []);
 
   const openEditRadiologyForm = useCallback((order: OrderBasketItem) => {
     closeWorkspace("order-basket", {
       ignoreChanges: true,
-      onWorkspaceClose: () =>
-        launchPatientWorkspace("add-radiology-order", { order }),
+      onWorkspaceClose: () => launchWorkspace("add-radiology-order", { order }),
     });
   }, []);
 

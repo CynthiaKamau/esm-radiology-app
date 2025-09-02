@@ -39,7 +39,7 @@ export function useOrderReasons(conceptUuids: Array<string>) {
 }
 
 export interface RadiologyOrderPost extends OrderPost {
-  scheduledDate?: Date | string;
+  scheduledDate?: string;
   commentToFulfiller?: string;
   laterality?: string;
   bodySite?: string;

@@ -1,5 +1,5 @@
 @use '@carbon/layout';
-@use '@carbon/styles/scss/type';
+@use '@carbon/type';
 
 .addPatientToQueue {
   --cds-layout-size-height-context: var(--cds-layout-size-height-sm, 2rem);

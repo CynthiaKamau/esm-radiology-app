@@ -11,8 +11,8 @@ import {
   parseDate,
   useLayoutType,
   usePatient,
+  launchWorkspace,
 } from "@openmrs/esm-framework";
-import { launchPatientWorkspace } from "@openmrs/esm-patient-common-lib";
 import { TestTypeSearch } from "./radiology-type-search";
 import { RadiologyOrderForm } from "./radiology-order-form.component";
 import styles from "./add-radiology-order.scss";
@@ -48,7 +48,7 @@ export default function AddRadiologyOrderWorkspace({
   const cancelOrder = useCallback(() => {
     closeWorkspace({
       ignoreChanges: true,
-      onWorkspaceClose: () => launchPatientWorkspace("order-basket"),
+      onWorkspaceClose: () => launchWorkspace("order-basket"),
     });
   }, [closeWorkspace]);
 

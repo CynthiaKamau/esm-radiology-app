@@ -27,7 +27,7 @@ export interface RadiologyOrderBasketItem extends OrderBasketItem {
     label: string;
     conceptUuid: string;
   };
-  urgency?: string;
+  urgency?: "ROUTINE" | "STAT" | "ON_SCHEDULED_DATE";
   instructions?: string;
   orderReason?: string;
   scheduleDate?: Date | string;

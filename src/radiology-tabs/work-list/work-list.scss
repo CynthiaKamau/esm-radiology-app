@@ -1,6 +1,6 @@
-@use '@carbon/styles/scss/spacing';
-@use '@carbon/styles/scss/type';
-@import "~@openmrs/esm-styleguide/src/vars";
+@use '@carbon/layout';
+@use '@carbon/type';
+@use '@openmrs/esm-styleguide/src/vars' as *;
 
 title {
   width: 6.938rem;
@@ -35,7 +35,7 @@ title {
 
 .orderTabs {
   grid-column: 'span 2';
-  padding: 0 spacing.$spacing-05;
+  padding: 0 layout.$spacing-05;
 }
 
 .newListButton {
@@ -65,7 +65,7 @@ title {
   grid-row: 3 / 4;
   grid-column: 1 / 2;
   height: 100%;
-  margin: 0.5rem spacing.$spacing-05;
+  margin: 0.5rem layout.$spacing-05;
   background-color: $ui-01;
   border: 0.5px solid #e0e0e0;
 
@@ -95,7 +95,7 @@ title {
 
 .tableContainer {
   background-color: $ui-01;
-  margin: 0 spacing.$spacing-05;
+  margin: 0 layout.$spacing-05;
   padding: 0;
 
   a {
@@ -111,8 +111,8 @@ title {
   }
 
   .toolbarContent {
-    height: spacing.$spacing-07;
-    margin-bottom: spacing.$spacing-02;
+    height: layout.$spacing-07;
+    margin-bottom: layout.$spacing-02;
   }
 }
 
